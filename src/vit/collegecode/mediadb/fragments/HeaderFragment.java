@@ -18,6 +18,7 @@ package vit.collegecode.mediadb.fragments;
 
 //import com.afollestad.cardsui.CardAdapter;
 import vit.collegecode.mediadb.NotifyingScrollView;
+import vit.collegecode.mediadb.R;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Build;
@@ -26,6 +27,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AbsListView;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
@@ -178,6 +181,9 @@ public abstract class HeaderFragment extends Fragment {
                 scrollHeaderTo(0, true);
             }
         });
+        
+        Animation anim = AnimationUtils.loadAnimation(getActivity(), R.anim.slide_in_bottom);
+		mFrameLayout.startAnimation(anim);
 
         return mFrameLayout;
     }
@@ -267,6 +273,10 @@ public abstract class HeaderFragment extends Fragment {
 
     public int getHeaderBackgroundScrollMode() {
         return mHeaderBackgroundScrollMode;
+    }
+    
+    public View getContainer(){
+    	return mFrameLayout;
     }
 
 }

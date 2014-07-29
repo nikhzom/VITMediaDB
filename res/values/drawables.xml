@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="actionbar_bg" type="drawable">@android:color/holo_blue_dark</item>
+    <item name="actionbar_bg" type="drawable">@color/theme</item>
 </resources>

@@ -21,5 +21,6 @@
     <color name="transparent_holo_light_blue">#4433b5e5</color>
     <color name="white">#ffffffff</color>
     <color name="background_tab_pressed">#6633B5E5</color>
+     <color name="theme">#ff6622</color>
     
 </resources>

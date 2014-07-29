@@ -20,7 +20,7 @@ public  class BitmapScale{
 	{
 		mActivity=context;
 	}
-	public int calculateInSampleSize(
+	public static int calculateInSampleSize(
             BitmapFactory.Options options, int reqWidth, int reqHeight) {
     // Raw height and width of image
     final int height = options.outHeight;
@@ -44,7 +44,7 @@ public  class BitmapScale{
 }
 	
 	
-	public Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
+	public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
 	        int reqWidth, int reqHeight) {
 
 	    // First decode with inJustDecodeBounds=true to check dimensions
